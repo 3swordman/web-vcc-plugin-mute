@@ -6,7 +6,7 @@ on("receive", function (req) {
 })
 
 on("send", function (req) {
-  if (!req.msg.startswith("/mute")) {
+  if (!req.msg.startsWith("/mute")) {
     return req
   }
   blockUsers.push(req.msg.slice(6))
